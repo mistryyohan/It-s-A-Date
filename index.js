@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
     noButton.addEventListener('mouseover', function() {
       moveButton();
     });
-  
+    
+    noButton.addEventListener('click', function() {
+      moveButton();
+    });
+
     yesButton.addEventListener('click', function() {
       changeContent();
     });
@@ -19,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
       var newX = Math.random() * maxX;
       var newY = Math.random() * maxY;
+  
+      // Ensure the button stays within the visible area on smaller screens
+      newX = Math.min(newX, maxX - 10);
+      newY = Math.min(newY, maxY - 10);
   
       noButton.style.position = 'absolute';
       noButton.style.left = newX + 'px';
