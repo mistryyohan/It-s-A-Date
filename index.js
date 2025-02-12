@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var futureDate = new Date(currentDate);
       futureDate.setDate(currentDate.getDate() + 3);
       var formattedFutureDate = futureDate.toLocaleDateString('en-US', options);
-      h1Element.textContent = "See you on "+formattedFutureDate;
+      h1Element.textContent = "It's a Date!! See you soon";
       imgElement.src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDd6bHZrcXA2NWI5cGc2dmR5OGRnajN5NzNuc3lvanU3MTU1YnZ4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/yNvmkSbnamOXEfnYxY/giphy.gif"; // Replace with the path to your new image
       imgElement.alt = "Description of the new image";
     }
